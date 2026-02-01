@@ -43,7 +43,9 @@ export default function LoginScreen() {
       if (Platform.OS === 'web') {
         const { error } = await supabase.auth.signInWithOAuth({
           provider: 'google',
-          options: { redirectTo: window.location.origin },
+          options: { 
+            redirectTo: `${window.location.origin}/auth/callback`
+          },
         });
         if (error) Alert.alert('Error', error.message);
         setIsLoading(false);
