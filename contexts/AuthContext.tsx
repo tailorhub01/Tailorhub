@@ -7,7 +7,7 @@ import {
 } from 'react';
 
 import { Session, User } from '@supabase/supabase-js';
-import { AppState } from 'react-native';
+import { AppState, Platform } from 'react-native';
 import { supabase } from '../lib/supabase';
 
 /* =======================
